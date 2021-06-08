@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="src_c1">#3e78c4</color>
+    <color name="src_c2">#3e78c4</color>
+    <color name="src_c3">#ceddf0</color>
+    <color name="src_c4">#efeff4</color>
+    <color name="src_c5">#eeeeee</color>
+    <color name="src_c6">#cccccc</color>
+    <color name="src_c7">#fafafa</color>
+    <color name="src_c8">#ffffff</color>
+    <color name="src_c9">#80000000</color>
+    <color name="src_c10">#ffdcdd</color>
+    <color name="src_c11">#FF0000</color>
+    <color name="src_c12">#25272a</color>
+    <color name="src_c13">#1b1d20</color>
+    <color name="src_c14">#F78135</color>
+    <color name="src_c15">#656567</color>
+    <color name="src_c16">#7fa1ce</color>
+    <color name="src_c17">#7F3E78C4</color>
+    <color name="src_c18">#7fcac3</color>
+    <color name="src_c19">#6f6f6f</color>
+    <color name="src_c20">#39393A</color>
+    <color name="src_c21">#464647</color>
+    <color name="src_c22">#307965</color>
+    <color name="src_c23">#C24A50</color>
+    <color name="src_c24">#B87220</color>
+    <color name="src_c25">#0FB2AC</color>
+</resources>
