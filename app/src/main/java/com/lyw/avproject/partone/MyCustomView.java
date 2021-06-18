@@ -1,4 +1,4 @@
-package com.lyw.avproject;
+package com.lyw.avproject.partone;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -7,6 +7,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.lyw.avproject.R;
 
 import androidx.annotation.Nullable;
 

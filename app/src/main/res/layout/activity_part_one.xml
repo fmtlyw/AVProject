@@ -6,18 +6,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:textSize="18dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:textColor="@color/src_c1"
-        android:text="Android音视频开发线路"
+    <ImageView
+        android:id="@+id/imageview_iv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_list"
-        android:layout_width="match_parent"
+    <SurfaceView
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/surfaceview_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.lyw.avproject.partone.MyCustomView
+        android:layout_gravity="center"
+        android:id="@+id/myCustomView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
