@@ -16,9 +16,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView imageView;
     private SurfaceView mSv;
-    private TextView loadImage;
+    private MyCustomView mMyCustomView;
 
     private  Handler mHandler = new Handler(Looper.getMainLooper());
 
@@ -57,22 +55,11 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         imageView = (ImageView) findViewById(R.id.imageview_iv);
         mSv = (SurfaceView)findViewById(R.id.surfaceview_sv);
-        loadImage = (TextView)findViewById(R.id.loadImage);
+        mMyCustomView = (MyCustomView)findViewById(R.id.myCustomView);
 
-        loadImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setSurfaceView();
-            }
-        });
-    }
-
-
-
-//    public void loadPicture(View v){
-//        //        setImageView();
 //        setSurfaceView();
-//    }
+
+    }
 
 
     private void setImageView() {
@@ -91,39 +78,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setSurfaceView() {
-        SurfaceHolder holder = mSv.getHolder();
-        Log.d("lyw","holder-->"+holder);
         mSv.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
-                Log.d("lyw","surfaceHolder-->"+surfaceHolder);
                 if (surfaceHolder == null) {
                     return;
                 }
-//
-//                Paint paint = new Paint();
-//                paint.setAntiAlias(true);
-//                paint.setStyle(Paint.Style.STROKE);
-//
-//                Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory().getPath() + File.separator + "tupian.jpg");
-//
-//                Canvas canvas = surfaceHolder.lockCanvas();  // 先锁定当前surfaceView的画布
-//                canvas.drawBitmap(getImageFromAssets(MainActivity.this, "tupian.jpg"), 0, 0, paint); //执行绘制操作
-//                surfaceHolder.unlockCanvasAndPost(canvas); // 解除锁定并显示在界面上
+
+                //要在子线程绘制
+
+                Paint paint = new Paint();
+                paint.setAntiAlias(true);
+                paint.setStyle(Paint.Style.STROKE);
+
+                Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory().getPath() + File.separator + "tupian.jpg");
+
+                Canvas canvas = surfaceHolder.lockCanvas();  // 先锁定当前surfaceView的画布
+                canvas.drawBitmap(getImageFromAssets(MainActivity.this, "tupian.jpg"), 0, 0, paint); //执行绘制操作
+                surfaceHolder.unlockCanvasAndPost(canvas); // 解除锁定并显示在界面上
             }
 
             @Override
             public void surfaceChanged(@NonNull SurfaceHolder surfaceHolder, int i, int i1, int i2) {
-
             }
 
             @Override
             public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
-
             }
         });
     }
-
 
     /**
      * 从assests获取图片

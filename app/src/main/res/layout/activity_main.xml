@@ -12,16 +12,16 @@
         android:layout_height="wrap_content"/>
 
     <SurfaceView
+        android:visibility="gone"
+        android:layout_gravity="center"
         android:id="@+id/surfaceview_sv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-
-    <TextView
-        android:id="@+id/loadImage"
-        android:text="加载图片"
-        android:textColor="@color/src_c3"
-        android:clickable="true"
-        android:gravity="bottom"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <com.lyw.avproject.MyCustomView
+        android:layout_gravity="center"
+        android:id="@+id/myCustomView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
