@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/src_c1"
+            android:text="AudioRecord采集/AudioTrack播放"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/record_collect_tv"
+                android:textSize="16dp"
+                android:layout_margin="10dp"
+                android:background="@color/src_c6"
+                android:gravity="center"
+                android:textColor="@color/src_c1"
+                android:text="采集"
+                android:padding="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/record_play_tv"
+                android:textSize="16dp"
+                android:layout_margin="10dp"
+                android:background="@color/src_c6"
+                android:gravity="center"
+                android:textColor="@color/src_c1"
+                android:text="播放"
+                android:padding="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/record_stop_tv"
+                android:textSize="16dp"
+                android:layout_margin="10dp"
+                android:background="@color/src_c6"
+                android:gravity="center"
+                android:textColor="@color/src_c1"
+                android:text="停止"
+                android:padding="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/play_stop_tv"
+                android:textSize="16dp"
+                android:layout_margin="10dp"
+                android:background="@color/src_c6"
+                android:gravity="center"
+                android:textColor="@color/src_c1"
+                android:text="停止播放"
+                android:padding="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
