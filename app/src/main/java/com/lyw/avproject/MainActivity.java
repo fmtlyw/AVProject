@@ -46,6 +46,7 @@ public class MainActivity extends BaseActivity implements PartAdapter.OnPartItem
         mPartList = new ArrayList<>();
         mPartList.add(new PartBeen("第一关：绘制图片","com.lyw.avproject.partone.PartOneActivity"));
         mPartList.add(new PartBeen("第二关：使用AudioRecord和AudioTrack API完成音频PCM数据的采集和播放，并实现读写音频wav文件","com.lyw.avproject.parttwo.PartTwoActivity"));
+        mPartList.add(new PartBeen("第三关：使用Camera API进行视频的采集，分别使用SurfaceView、TextureView来预览Camera数据，取到NV21的数据回调","com.lyw.avproject.partthree.PartThreeActivity"));
     }
 
     @Override

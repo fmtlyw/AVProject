@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat;
 public class PermissionUtil {
 
     public static final String[] PERMISSION_RECORD = new String[]{Manifest.permission.RECORD_AUDIO};
+    public static final String[] PERMISSION_CAMERA = new String[]{Manifest.permission.CAMERA};
     public static final String[] PERMISSION_SD_WRITE = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
     /**
@@ -29,6 +30,10 @@ public class PermissionUtil {
      * 录音
      */
     public static final int REQUEST_RECORD = 104;
+    /**
+     * 相机
+     */
+    public static final int REQUEST_CAMERA = 105;
 
     /**
      * 判断是否有文件读写的权限
@@ -91,6 +96,29 @@ public class PermissionUtil {
         if (Build.VERSION.SDK_INT >= 23) {
             if (!isHasSDCardWritePermission(context)) {
                 ActivityCompat.requestPermissions((Activity) context, PERMISSION_SD_WRITE, REQUEST_SD_WRITE);
+            }
+        }
+    }
+
+
+    /**
+     * 判断是否有相机权限
+     * @param context
+     * @return
+     */
+    public static boolean isHasCameraPermission(Context context) {
+        return ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    /**
+     * 请求录音权限
+     *
+     * @param context
+     */
+    public static void requestsCameraPermission(Context context) {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (!isHasRecordPermission(context)) {
+                ActivityCompat.requestPermissions((Activity) context,PERMISSION_CAMERA, REQUEST_CAMERA);
             }
         }
     }
